@@ -1,0 +1,29 @@
+<!-- app/templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Available Opportunities</h1>
+    <ul>
+        {% for opportunity in opportunities %}
+        <li>{{ opportunity.title }} - {{ opportunity.description }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Create Profile</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="skills" placeholder="Your Skills"></textarea>
+        <textarea name="interests" placeholder="Career Interests"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <a href="{{ url_for('main.add_opportunity') }}">Add Opportunity</a>
+</body>
+</html>

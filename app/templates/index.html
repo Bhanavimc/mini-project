@@ -1,0 +1,38 @@
+<!-- app/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship & Industry Project Matchmaking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Internship & Industry Project Matchmaking System</h1>
+        <p>Your gateway to connecting with the right internship and project opportunities!</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get Started</h2>
+            <p>To begin matching with opportunities, please log in or sign up:</p>
+            <a href="{{ url_for('main.login') }}" class="btn">Login</a>
+            <a href="{{ url_for('main.signup') }}" class="btn">Sign Up</a>
+        </section>
+
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Personalized Matches:</strong> Find the best internship and project opportunities based on your skills and interests.</li>
+                <li><strong>Industry Connections:</strong> Get direct access to verified internship opportunities from top companies.</li>
+                <li><strong>Skill Development:</strong> Enhance your professional skills through hands-on projects and mentorship.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Internship & Industry Project Matchmaking System</p>
+    </footer>
+</body>
+</html>
